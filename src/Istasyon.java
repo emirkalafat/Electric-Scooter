@@ -1,7 +1,9 @@
+import java.util.ArrayList;
+
 public class Istasyon {
     private String il , ilçe ;
     private int aracSayısı;
-
+    private ArrayList araclar = new ArrayList();
 
 
     public Istasyon(String il , String ilçe){
@@ -11,6 +13,14 @@ public class Istasyon {
 
     public String aracınKonumu(){
         return "Aracın konumu : "+getIl()+" "+getIlçe();
+    }
+
+    public ArrayList getAraclar() {
+        return araclar;
+    }
+
+    public void setAraclar(ArrayList araclar) {
+        this.araclar = araclar;
     }
 
     public int getAracSayısı() {

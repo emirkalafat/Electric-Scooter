@@ -4,8 +4,11 @@ public class Araclar extends Istasyon {
     private String renk;
     private int numara = 1;
 
-    public void butunAraclar() {
 
+    public void butunAraclar() {
+        for (int i=0 , i<getAraclar().size(); i++){
+            System.out.println(araclar<i>);
+        }
     }
 
     public Araclar(String il, String ilçe, int maxHız, int şarjDurumu, int seriNumarası, Istasyon istasyon) {
@@ -14,6 +17,7 @@ public class Araclar extends Istasyon {
         this.şarjDurumu = şarjDurumu;
         this.seriNumarası = seriNumarası;
         this.renk = "siyah";
+
     }
 
     public Araclar(int maxHız, int şarjDurumu, String renk, Istasyon istasyon) {
