@@ -3,8 +3,14 @@ import java.util.ArrayList;
 public class Istasyon {
     private String il , ilçe ;
     private int aracSayısı;
-    private ArrayList araclar = new ArrayList();
+    private static ArrayList araclar = new ArrayList();
 
+
+    public static void istasyondakiAraclar() {
+        for (int i = 0; i < araclar.size() ; i++) {
+            System.out.println(araclar.indexOf(i));
+        }
+    }
 
     public Istasyon(String il , String ilçe){
         this.il=il;

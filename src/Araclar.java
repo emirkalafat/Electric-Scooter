@@ -5,11 +5,7 @@ public class Araclar extends Istasyon {
     private int numara = 1;
 
 
-    public void butunAraclar() {
-        for (int i=0 , i<getAraclar().size(); i++){
-            System.out.println(araclar<i>);
-        }
-    }
+
 
     public Araclar(String il, String ilçe, int maxHız, int şarjDurumu, int seriNumarası, Istasyon istasyon) {
         super(istasyon.getIl(), istasyon.getIlçe());
