@@ -14,10 +14,16 @@ public class Test {
         istasyon1.aracEkle(arac1);
         istasyon1.aracEkle(arac2);
         istasyon1.aracEkle(arac3);
+        istasyon2.aracEkle(arac4);
         istasyon1.araclarıListele();
         surucu1.aracıTeslimAl(istasyon1,arac1);
+
+
         System.out.println(arac1.getSofor());
         System.out.println(arac1.toString());
+        System.out.println("**********");
+        System.out.println(arac1.getIstasyon());
+        System.out.println(arac4.getIstasyon());
         /*System.out.println("*************");
         istasyon1.araclarıListele();
         istasyon2.araclarıListele();

@@ -10,12 +10,12 @@ public class Suruculer extends Kullanıcılar {
     }
 
 
-    public void aracıTeslimAl(Istasyon bulunduguYer, Araclar araclar) {
+    public void aracıTeslimAl(Istasyon bulunduguYer, Araclar arac) {
         if (this.getBakiye() > 0) {
             if (bulunduguYer.aracListesi.size() != 0) {
                 System.out.println("Lütfen kurallara uyunuz! Keyifli sürüşler. ");
-                araclar.setSofor(this);
-                bulunduguYer.aracListesi.remove(araclar);
+                arac.setSofor(this);
+                bulunduguYer.aracListesi.remove(arac);
 
             } else {
                 System.out.println("Bulunduğunuz istasyonda scooter mevcut değildir!!");
