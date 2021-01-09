@@ -15,6 +15,7 @@ public class Suruculer extends Kullanıcılar {
             if (bulunduguYer.aracListesi.size() != 0) {
                 System.out.println("Lütfen kurallara uyunuz! Keyifli sürüşler. ");
                 arac.setSofor(this);
+
                 bulunduguYer.aracListesi.remove(arac);
 
             } else {
