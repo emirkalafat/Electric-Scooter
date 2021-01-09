@@ -9,4 +9,16 @@ public class Yonetici extends Kullanıcılar {
         this.setAracEklemeYetkisi(true);
         this.setAracKaldırmaYetkisi(true);
     }
+
+    public void aracEkle(Istasyon istasyon, Araclar araclar){
+        araclar.setIstasyon(istasyon);
+        istasyon.aracEkle(araclar);
+    }
+    public void aracKaldır(Istasyon istasyon, Araclar araclar){
+        if (istasyon.aracListesi.contains(araclar)){
+            istasyon.aracKaldır(araclar);
+        }else{
+            System.out.println("Belirtilen scooter istasyonda bulunmamaktadır!");
+        }
+    }
 }

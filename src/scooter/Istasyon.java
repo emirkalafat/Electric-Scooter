@@ -16,6 +16,10 @@ public class Istasyon {
         a.setIstasyon(this);
 
     }
+    void aracKaldır(Araclar a){
+        this.aracListesi.remove(a);
+        a.setIstasyon(null);
+    }
 
     void araclarıListele() {
 
