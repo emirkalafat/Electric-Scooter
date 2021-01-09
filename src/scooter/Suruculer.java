@@ -5,8 +5,8 @@ package scooter;
  */
 public class Suruculer extends Kullanıcılar {
 
-    public Suruculer(String adi, String soyadi, String kullaniciAdi) {
-        super(adi, soyadi, kullaniciAdi);
+    public Suruculer(String adi, String soyadi, String kullaniciAdi, String kullanıcıSifresi) {
+        super(adi, soyadi, kullaniciAdi, kullanıcıSifresi);
     }
 
 
@@ -24,7 +24,7 @@ public class Suruculer extends Kullanıcılar {
 
     }
 
-    public void aracıTeslimEt(Araclar araclar, Istasyon gidecegiYer, int kullanımSüresiDAKİKA) {
+    public void aracıTeslimEt(Araclar araclar, Istasyon gidecegiYer, int kullanımSüresiDAKİKA, String fotoCekimi) {
         if (araclar.getSofor() != null) {
             Tarife fiyat = new Tarife();
 

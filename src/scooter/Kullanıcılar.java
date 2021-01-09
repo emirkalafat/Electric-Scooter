@@ -4,7 +4,7 @@ package scooter;
  * @author emirklft
  */
 public class Kullanıcılar {
-    private String adi, soyadi, kullaniciAdi, kullaniciTuru;
+    private String adi, soyadi, kullaniciAdi, kullaniciTuru ,kullanıcıSirfesi;
     private int bakiye;
     private boolean aracEklemeYetkisi, aracKaldırmaYetkisi;
 
@@ -20,10 +20,11 @@ public class Kullanıcılar {
                 '}';
     }
 
-    public Kullanıcılar(String adi, String soyadi, String kullaniciAdi) {
+    public Kullanıcılar(String adi, String soyadi, String kullaniciAdi, String kullanıcıSirfesi) {
         this.adi = adi;
         this.soyadi = soyadi;
         this.kullaniciAdi = kullaniciAdi;
+        this.kullanıcıSirfesi = kullanıcıSirfesi;
         this.kullaniciTuru = "söför";
         this.aracEklemeYetkisi = false;
         this.aracKaldırmaYetkisi = false;
