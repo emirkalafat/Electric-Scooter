@@ -17,5 +17,5 @@ ___
 + Kullanıcı bulunduğu istasyondan araç alabilecek.
 + Kullanıcının bulunduğu istasyonda scooter yoksa diğer istasyonlardaki scooterlerı gösterebilcek.
 + Adminler hangi istasyonda ne kadar ve hangi özelliklerde scooter var görebilecek.
-    + Kullanıcılar sadece istasyonlarda kaç tane araç olduğunu görebilecek.
+    + scooter.Kullanıcılar sadece istasyonlarda kaç tane araç olduğunu görebilecek.
 +    
