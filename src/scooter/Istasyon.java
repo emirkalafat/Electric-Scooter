@@ -29,9 +29,9 @@ public class Istasyon {
 
     @Override
     public String toString() {
-        return "il='" + il + '\'' +
-                ", ilçe='" + ilçe + '\'' +
-                '}';
+        return " il='" + il + '\'' +
+                ", ilçe='" + ilçe + '\'' ;
+
 
     }
 
