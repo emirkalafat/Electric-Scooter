@@ -34,6 +34,8 @@ public class Araclar {
         this.renk = renk;
         this.hız = hız;
         this.sarj = sarj;
+        this.sofor = null;
+        this.istasyon = null;
     }
 
     public Suruculer getSofor() {

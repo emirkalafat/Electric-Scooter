@@ -15,7 +15,6 @@ public class Suruculer extends Kullanıcılar {
             if (bulunduguYer.aracListesi.size() != 0) {
                 System.out.println("Lütfen kurallara uyunuz! Keyifli sürüşler. ");
                 arac.setSofor(this);
-
                 bulunduguYer.aracListesi.remove(arac);
 
             } else {
@@ -26,20 +25,20 @@ public class Suruculer extends Kullanıcılar {
     }
 
     public void aracıTeslimEt(Araclar araclar, Istasyon gidecegiYer, int kullanımSüresiDAKİKA) {
-       if (araclar.getSofor()!=null){
-           Tarife fiyat = new Tarife();
+        if (araclar.getSofor() != null) {
+            Tarife fiyat = new Tarife();
 
-           this.setBakiye(this.getBakiye() - fiyat.tarifeHesabı(kullanımSüresiDAKİKA));
-           System.out.println("Scooter başarıyla teslim edildi!");
-           if (this.getBakiye() < 0) {
-               System.out.println("bakiyeniz eksiye düştü. En kısa zamanda para yükleyiniz.");
-           }
-           araclar.setIstasyon(gidecegiYer);
-           gidecegiYer.aracListesi.add(araclar);
-           araclar.setSofor(null);
-       }else {
-           System.out.println("HATALI İŞLEM. Herhangi bir scooter kiralamadınız!!");
-       }
+            this.setBakiye(this.getBakiye() - fiyat.tarifeHesabı(kullanımSüresiDAKİKA));
+            System.out.println("Scooter başarıyla teslim edildi!");
+            if (this.getBakiye() < 0) {
+                System.out.println("bakiyeniz eksiye düştü. En kısa zamanda para yükleyiniz.");
+            }
+            araclar.setIstasyon(gidecegiYer);
+            gidecegiYer.aracListesi.add(araclar);
+            araclar.setSofor(null);
+        } else {
+            System.out.println("HATALI İŞLEM. Herhangi bir scooter kiralamadınız!!");
+        }
 
     }
 

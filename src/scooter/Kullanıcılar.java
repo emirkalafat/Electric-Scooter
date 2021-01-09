@@ -1,25 +1,36 @@
 package scooter;
+
 /**
- *
  * @author emirklft
  */
 public class Kullanıcılar {
-    private String adi, soyadi , kullaniciAdi,kullaniciTuru;
+    private String adi, soyadi, kullaniciAdi, kullaniciTuru;
     private int bakiye;
-    private boolean aracEklemeYetkisi , aracKaldırmaYetkisi;
+    private boolean aracEklemeYetkisi, aracKaldırmaYetkisi;
 
 
+    @Override
+    public String toString() {
+        return "Kullanıcılar{" +
+                "adi='" + adi + '\'' +
+                ", soyadi='" + soyadi + '\'' +
+                ", kullaniciAdi='" + kullaniciAdi + '\'' +
+                ", kullaniciTuru='" + kullaniciTuru + '\'' +
+                ", bakiye=" + bakiye +
+                '}';
+    }
 
     public Kullanıcılar(String adi, String soyadi, String kullaniciAdi) {
         this.adi = adi;
         this.soyadi = soyadi;
         this.kullaniciAdi = kullaniciAdi;
         this.kullaniciTuru = "söför";
-        this.aracEklemeYetkisi=false;
-        this.aracKaldırmaYetkisi=false;
+        this.aracEklemeYetkisi = false;
+        this.aracKaldırmaYetkisi = false;
 
     }
-    void bakiyeYukle(int paraTL){
+
+    void bakiyeYukle(int paraTL) {
         this.bakiye = this.bakiye + paraTL;
     }
 

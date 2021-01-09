@@ -16,6 +16,7 @@ public class Test {
         istasyon1.aracEkle(arac3);
         istasyon2.aracEkle(arac4);
         istasyon1.araclarıListele();
+        surucu1.bakiyeYukle(10);
         surucu1.aracıTeslimAl(istasyon1,arac1);
 
 
@@ -24,18 +25,18 @@ public class Test {
         System.out.println("**********");
         System.out.println(arac1.getIstasyon());
         System.out.println(arac4.getIstasyon());
-        /*System.out.println("*************");
+        System.out.println("*************");
         istasyon1.araclarıListele();
         istasyon2.araclarıListele();
 
         System.out.println(surucu1.getBakiye());
-        surucu1.bakiyeYukle(10);
+
         System.out.println(surucu1.getBakiye());
         surucu1.aracıTeslimEt(arac1,istasyon2,78);
 
         System.out.println(surucu1.getBakiye());
         surucu1.aracıTeslimEt(arac1,istasyon2,78);
         istasyon2.araclarıListele();
-*/
+
     }
 }
