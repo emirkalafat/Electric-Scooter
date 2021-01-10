@@ -3,12 +3,14 @@ package scooter;
 import java.util.Scanner;
 
 public class Test {
+
     static boolean fotoCekimi(char EH){
         if (EH == 'E' | EH == 'e'){
             return true;
         }
         else return false;
     }
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
