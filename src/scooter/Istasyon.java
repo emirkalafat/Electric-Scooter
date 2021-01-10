@@ -16,6 +16,10 @@ public class Istasyon {
         a.setIstasyon(this);
 
     }
+    void aracKaldır(Araclar a){
+        this.aracListesi.remove(a);
+        a.setIstasyon(null);
+    }
 
     void araclarıListele() {
 
@@ -29,9 +33,9 @@ public class Istasyon {
 
     @Override
     public String toString() {
-        return "il='" + il + '\'' +
-                ", ilçe='" + ilçe + '\'' +
-                '}';
+        return " il='" + il + '\'' +
+                ", ilçe='" + ilçe + '\'' ;
+
 
     }
 

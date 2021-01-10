@@ -5,7 +5,7 @@ package scooter;
  */
 public class Araclar {
     private String renk;
-    private int hız, sarj;
+    private int hız;
     private Suruculer sofor;
     private Istasyon istasyon;
 
@@ -24,16 +24,14 @@ public class Araclar {
         return "Araclar{" +
                 "renk='" + renk + '\'' +
                 ", hız=" + hız +
-                ", sarj=" + sarj +
                 ", sofor=" + sofor +
                 ", istasyon=" + istasyon +
                 '}';
     }
 
-    public Araclar(String renk, int hız, int sarj) {
+    public Araclar(String renk, int hız) {
         this.renk = renk;
         this.hız = hız;
-        this.sarj = sarj;
         this.sofor = null;
         this.istasyon = null;
     }
@@ -62,11 +60,5 @@ public class Araclar {
         this.hız = hız;
     }
 
-    public int getSarj() {
-        return sarj;
-    }
 
-    public void setSarj(int sarj) {
-        this.sarj = sarj;
-    }
 }

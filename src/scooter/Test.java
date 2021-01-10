@@ -1,16 +1,20 @@
 package scooter;
 
+import java.util.Scanner;
+
 public class Test {
 
     public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
         Istasyon istasyon1 = new Istasyon("İstanbul","Bayrampaşa");
         Istasyon istasyon2 =new Istasyon("İstanbul","Eyüp");
-        Araclar arac1 =new Araclar("mavi",35,76);
-        Araclar arac2 =new Araclar("yeşil",20,50);
-        Araclar arac3 =new Araclar("kırmızı",20,50);
-        Araclar arac4 =new Araclar("mavi",20,30);
-        Araclar arac5 =new Araclar("yeşil",35,100);
-        Suruculer surucu1 =new Suruculer("Ahmet", "Kalafat","garlicman");
+        Araclar arac1 =new Araclar("mavi",35);
+        Araclar arac2 =new Araclar("yeşil",20);
+        Araclar arac3 =new Araclar("kırmızı",20);
+        Araclar arac4 =new Araclar("mavi",20);
+        Araclar arac5 =new Araclar("yeşil",35);
+        Suruculer surucu1 =new Suruculer("Ahmet", "Kalafat","garlicman","123ahmet");
         istasyon1.aracEkle(arac1);
         istasyon1.aracEkle(arac2);
         istasyon1.aracEkle(arac3);
@@ -32,11 +36,14 @@ public class Test {
         System.out.println(surucu1.getBakiye());
 
         System.out.println(surucu1.getBakiye());
-        surucu1.aracıTeslimEt(arac1,istasyon2,78);
+        String foto = scan.next();
+        surucu1.aracıTeslimEt(arac1,istasyon2,78,foto);
 
         System.out.println(surucu1.getBakiye());
-        surucu1.aracıTeslimEt(arac1,istasyon2,78);
+        surucu1.aracıTeslimEt(arac1,istasyon2,78, foto);
         istasyon2.araclarıListele();
+        istasyon1.araclarıListele();
+        System.out.println(arac2.toString());
 
     }
 }
