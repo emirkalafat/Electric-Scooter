@@ -26,12 +26,13 @@ public class Main {
         Araclar arac5 = new Araclar("yeşil", 35);
         Suruculer surucu1 = new Suruculer("Ahmet", "Kalafat", "garlicman", "123ahmet");
         Yonetici yonetici = new Yonetici("Abuzer", "Abuzeroğlu", "abuzettin", "123admin");
-        kullanıcıEklendi(surucu1);
+
+        /** test */ /*kullanıcıEklendi(surucu1);
         kullanıcıEklendi(yonetici);
         for (int i = 0; i < kullanıcıAdıArrayList.size(); i++) {
             System.out.println(kullanıcıAdıArrayList.get(i).toString());
         }
-
+        */
 
         /** Kullanıcı İşlemleri */
 
@@ -42,9 +43,6 @@ public class Main {
             String kAdı = scan.next();
             System.out.print("Şifre: ");
             String kSifre = scan.next();
-
-
-
 
 
             System.out.println("Ana menüye dönmek ister misiniz? [Evet/Hayır]");
