@@ -31,7 +31,6 @@ public class Kullanıcılar {
         this.kullaniciTuru = "şöför";
         this.aracEklemeYetkisi = false;
         this.aracKaldırmaYetkisi = false;
-
     }
 
     void bakiyeYukle(int paraTL) {
