@@ -13,10 +13,10 @@ public class Suruculer extends Kullanıcılar {
 
     public void aracıTeslimAl(Istasyon bulunduguYer, Araclar arac) {
         if (this.getBakiye() > 0) {
-            if (bulunduguYer.aracListesi.size() != 0) {
+            if (bulunduguYer.getAracListesi().size() != 0) {
                 System.out.println("Lütfen kurallara uyunuz! Keyifli sürüşler. ");
                 arac.setSofor(this);
-                bulunduguYer.aracListesi.remove(arac);
+                bulunduguYer.getAracListesi().remove(arac);
 
             } else {
                 System.out.println("Bulunduğunuz istasyonda scooter mevcut değildir!!");
@@ -35,7 +35,7 @@ public class Suruculer extends Kullanıcılar {
                 System.out.println("bakiyeniz eksiye düştü. En kısa zamanda para yükleyiniz.");
             }
             araclar.setIstasyon(gidecegiYer);
-            gidecegiYer.aracListesi.add(araclar);
+            gidecegiYer.getAracListesi().add(araclar);
             araclar.setSofor(null);
         } else {
             System.out.println("HATALI İŞLEM. Herhangi bir scooter kiralamadınız!!");

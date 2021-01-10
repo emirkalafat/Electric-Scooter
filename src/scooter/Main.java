@@ -45,6 +45,8 @@ public class Main {
             String kSifre = scan.next();
 
 
+
+            /** Son İşlem */
             System.out.println("Ana menüye dönmek ister misiniz? [Evet/Hayır]");
             Character girdi = scan.next().charAt(0);
             switch (girdi) {
