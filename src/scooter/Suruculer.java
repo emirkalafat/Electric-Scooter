@@ -10,7 +10,6 @@ public class Suruculer extends Kullanıcılar {
 
     }
 
-
     public void aracıTeslimAl(Istasyon bulunduguYer, Araclar arac) {
         if (this.getBakiye() > 0) {
             if (bulunduguYer.getAracListesi().size() != 0) {
@@ -45,4 +44,3 @@ public class Suruculer extends Kullanıcılar {
 
 
 }
-

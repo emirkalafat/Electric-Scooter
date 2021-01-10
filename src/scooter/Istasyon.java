@@ -13,13 +13,11 @@ public class Istasyon {
     public Istasyon(String il, String ilçe) {
         this.il = il;
         this.ilçe = ilçe;
-
     }
 
     void aracEkle(Araclar a) {
         this.aracListesi.add(a);
         a.setIstasyon(this);
-
     }
     void aracKaldır(Araclar a){
         this.aracListesi.remove(a);
@@ -67,6 +65,4 @@ public class Istasyon {
     public void setIlçe(String ilçe) {
         this.ilçe = ilçe;
     }
-
-
 }

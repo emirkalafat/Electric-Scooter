@@ -12,8 +12,6 @@ public class Tarife{
             case 4 : return 17;
             case 5 : return 22;
             default: return 30;
-
         }
-
     }
 }
