@@ -8,8 +8,13 @@ import java.util.ArrayList;
 
 public class Istasyon {
     private String il, ilçe;
+    private ArrayList<Araclar> aracListesi = new ArrayList<>();
 
-    ArrayList<Araclar> aracListesi = new ArrayList<>();
+    public Istasyon(String il, String ilçe) {
+        this.il = il;
+        this.ilçe = ilçe;
+
+    }
 
     void aracEkle(Araclar a) {
         this.aracListesi.add(a);
@@ -39,10 +44,12 @@ public class Istasyon {
 
     }
 
-    public Istasyon(String il, String ilçe) {
-        this.il = il;
-        this.ilçe = ilçe;
+    public ArrayList<Araclar> getAracListesi() {
+        return aracListesi;
+    }
 
+    public void setAracListesi(ArrayList<Araclar> aracListesi) {
+        this.aracListesi = aracListesi;
     }
 
     public String getIl() {

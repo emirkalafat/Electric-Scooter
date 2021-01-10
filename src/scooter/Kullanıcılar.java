@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * @author emirklft
  */
 public class Kullanıcılar {
-    private String adi, soyadi, kullaniciAdi, kullaniciTuru ,kullanıcıSirfesi;
+    private String adi, soyadi, kullaniciAdi, kullaniciTuru, kullanıcıSirfesi;
     private int bakiye;
     private boolean aracEklemeYetkisi, aracKaldırmaYetkisi;
 
@@ -23,20 +23,20 @@ public class Kullanıcılar {
     }
 
 
-
     public Kullanıcılar(String adi, String soyadi, String kullaniciAdi, String kullanıcıSirfesi) {
         this.adi = adi;
         this.soyadi = soyadi;
         this.kullaniciAdi = kullaniciAdi;
         this.kullanıcıSirfesi = kullanıcıSirfesi;
-        this.kullaniciTuru = "söför";
+        this.kullaniciTuru = "şöför";
         this.aracEklemeYetkisi = false;
         this.aracKaldırmaYetkisi = false;
-
     }
 
     void bakiyeYukle(int paraTL) {
-        this.bakiye = this.bakiye + paraTL;
+        if (this.kullaniciTuru == "şöför")
+            this.bakiye = this.bakiye + paraTL;
+        else System.out.println("Admin hesbı bakiye yüklemeye uygun değildir. Lütfen şöför hesabı ile giriş yapınız.");
     }
 
     public String getKullanıcıSirfesi() {

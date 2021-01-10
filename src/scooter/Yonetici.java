@@ -14,10 +14,12 @@ public class Yonetici extends Kullanıcılar {
     public void aracEkle(Istasyon istasyon, Araclar araclar){
         araclar.setIstasyon(istasyon);
         istasyon.aracEkle(araclar);
+        System.out.println(araclar+" "+ istasyon+ " istasyonuna başarıyla eklendi.");
     }
     public void aracKaldır(Istasyon istasyon, Araclar araclar){
-        if (istasyon.aracListesi.contains(araclar)){
+        if (istasyon.getAracListesi().contains(araclar)){
             istasyon.aracKaldır(araclar);
+            System.out.println(araclar+" "+ istasyon+ " istasyonundan başarıyla kaldırıldı.");
         }else{
             System.out.println("Belirtilen scooter istasyonda bulunmamaktadır!");
         }

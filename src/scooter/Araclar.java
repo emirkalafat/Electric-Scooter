@@ -9,19 +9,16 @@ public class Araclar {
     private Suruculer sofor;
     private Istasyon istasyon;
 
-
-
-    public Istasyon getIstasyon() {
-        return istasyon;
-    }
-
-    public void setIstasyon(Istasyon istasyon) {
-        this.istasyon = istasyon;
+    public Araclar(String renk, int hız) {
+        this.renk = renk;
+        this.hız = hız;
+        this.sofor = null;
+        this.istasyon = null;
     }
 
     @Override
     public String toString() {
-        return "Araclar{" +
+        return "Arac{" +
                 "renk='" + renk + '\'' +
                 ", hız=" + hız +
                 ", sofor=" + sofor +
@@ -29,11 +26,12 @@ public class Araclar {
                 '}';
     }
 
-    public Araclar(String renk, int hız) {
-        this.renk = renk;
-        this.hız = hız;
-        this.sofor = null;
-        this.istasyon = null;
+    public Istasyon getIstasyon() {
+        return istasyon;
+    }
+
+    public void setIstasyon(Istasyon istasyon) {
+        this.istasyon = istasyon;
     }
 
     public Suruculer getSofor() {
@@ -59,6 +57,4 @@ public class Araclar {
     public void setHız(int hız) {
         this.hız = hız;
     }
-
-
 }
