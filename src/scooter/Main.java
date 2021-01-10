@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    static ArrayList<String> kullanıcıAdıArrayList = new ArrayList<>();
+    /** test */ /*static ArrayList<String> kullanıcıAdıArrayList = new ArrayList<>();
     static ArrayList<String> kullanıcıSifresiArrayList = new ArrayList<>();
     public static void kullanıcıEklendi(Kullanıcılar k) {
         kullanıcıAdıArrayList.add(k.getKullaniciAdi());
         kullanıcıSifresiArrayList.add(k.getKullanıcıSirfesi());
     }
-
+    */
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         boolean bitir = false;
