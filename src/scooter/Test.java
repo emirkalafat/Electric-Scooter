@@ -4,6 +4,13 @@ import java.util.Scanner;
 
 public class Test {
 
+    static boolean fotoCekimi(char EH){
+        if (EH == 'E' | EH == 'e'){
+            return true;
+        }
+        else return false;
+    }
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
@@ -40,11 +47,12 @@ public class Test {
         System.out.println(surucu1.getBakiye());
 
         System.out.println(surucu1.getBakiye());
-        String foto = scan.next();
-        surucu1.aracıTeslimEt(arac1,istasyon2,78,foto);
+        System.out.println("Fotoğraf çektiniz mi? [Evet/Hayır]");
+        Character foto = scan.next().charAt(0);
+        surucu1.aracıTeslimEt(arac1,istasyon2,78,fotoCekimi(foto));
 
         System.out.println(surucu1.getBakiye());
-        surucu1.aracıTeslimEt(arac1,istasyon2,78, foto);
+        surucu1.aracıTeslimEt(arac1,istasyon2,78, fotoCekimi(foto));
         istasyon2.araclarıListele();
         istasyon1.araclarıListele();
         System.out.println(arac2.toString());

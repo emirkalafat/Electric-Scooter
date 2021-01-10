@@ -10,19 +10,6 @@ public class Kullanıcılar {
     private int bakiye;
     private boolean aracEklemeYetkisi, aracKaldırmaYetkisi;
 
-
-    @Override
-    public String toString() {
-        return "Kullanıcılar{" +
-                "adi='" + adi + '\'' +
-                ", soyadi='" + soyadi + '\'' +
-                ", kullaniciAdi='" + kullaniciAdi + '\'' +
-                ", kullaniciTuru='" + kullaniciTuru + '\'' +
-                ", bakiye=" + bakiye +
-                '}';
-    }
-
-
     public Kullanıcılar(String adi, String soyadi, String kullaniciAdi, String kullanıcıSirfesi) {
         this.adi = adi;
         this.soyadi = soyadi;
@@ -39,6 +26,17 @@ public class Kullanıcılar {
         else System.out.println("Admin hesbı bakiye yüklemeye uygun değildir. Lütfen şöför hesabı ile giriş yapınız.");
     }
 
+    @Override
+    public String toString() {
+        return "Kullanıcılar{" +
+                "adi='" + adi + '\'' +
+                ", soyadi='" + soyadi + '\'' +
+                ", kullaniciAdi='" + kullaniciAdi + '\'' +
+                ", kullaniciTuru='" + kullaniciTuru + '\'' +
+                ", bakiye=" + bakiye +
+                '}';
+    }
+
     public String getKullanıcıSirfesi() {
         return kullanıcıSirfesi;
     }
@@ -46,7 +44,6 @@ public class Kullanıcılar {
     public void setKullanıcıSirfesi(String kullanıcıSirfesi) {
         this.kullanıcıSirfesi = kullanıcıSirfesi;
     }
-
 
     public int getBakiye() {
         return bakiye;
