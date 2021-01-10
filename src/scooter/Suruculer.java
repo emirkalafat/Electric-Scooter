@@ -7,6 +7,7 @@ public class Suruculer extends Kullanıcılar {
 
     public Suruculer(String adi, String soyadi, String kullaniciAdi, String kullanıcıSifresi) {
         super(adi, soyadi, kullaniciAdi, kullanıcıSifresi);
+
     }
 
 

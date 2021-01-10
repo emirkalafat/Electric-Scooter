@@ -8,6 +8,7 @@ public class Yonetici extends Kullanıcılar {
         super(adi, soyadi, kullaniciAdi,kullanıcıSirfesi);
         this.setAracEklemeYetkisi(true);
         this.setAracKaldırmaYetkisi(true);
+        this.setKullaniciTuru("admin");
     }
 
     public void aracEkle(Istasyon istasyon, Araclar araclar){

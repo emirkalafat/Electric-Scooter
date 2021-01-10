@@ -1,5 +1,7 @@
 package scooter;
 
+import java.util.ArrayList;
+
 /**
  * @author emirklft
  */
@@ -20,6 +22,8 @@ public class Kullanıcılar {
                 '}';
     }
 
+
+
     public Kullanıcılar(String adi, String soyadi, String kullaniciAdi, String kullanıcıSirfesi) {
         this.adi = adi;
         this.soyadi = soyadi;
@@ -33,6 +37,14 @@ public class Kullanıcılar {
 
     void bakiyeYukle(int paraTL) {
         this.bakiye = this.bakiye + paraTL;
+    }
+
+    public String getKullanıcıSirfesi() {
+        return kullanıcıSirfesi;
+    }
+
+    public void setKullanıcıSirfesi(String kullanıcıSirfesi) {
+        this.kullanıcıSirfesi = kullanıcıSirfesi;
     }
 
 
