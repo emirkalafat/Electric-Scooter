@@ -24,11 +24,11 @@ public class Suruculer extends Kullanıcılar {
 
     }
 
-    public void aracıTeslimEt(Araclar araclar, Istasyon gidecegiYer, int kullanımSüresiDAKİKA, String fotoCekimi) {
+    public void aracıTeslimEt(Araclar araclar, Istasyon gidecegiYer, int kullanımSüresiDAKİKA, boolean fotoCekimi) {
         if (araclar.getSofor() != null) {
             Tarife fiyat = new Tarife();
 
-            this.setBakiye(this.getBakiye() - fiyat.tarifeHesabı(kullanımSüresiDAKİKA));
+            this.setBakiye(this.getBakiye() - fiyat.tarifeHesabı(kullanımSüresiDAKİKA,fotoCekimi));
             System.out.println("Scooter başarıyla teslim edildi!");
             if (this.getBakiye() < 0) {
                 System.out.println("bakiyeniz eksiye düştü. En kısa zamanda para yükleyiniz.");

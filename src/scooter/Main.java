@@ -11,6 +11,13 @@ public class Main {
         kullanıcıSifresiArrayList.add(k.getKullanıcıSirfesi());
     }
     */
+
+    static boolean fotoCekimi(char EH){
+        if (EH == 'E' | EH == 'e'){
+            return true;
+        }
+        else return false;
+    }
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         boolean bitir = false;
