@@ -35,6 +35,7 @@ public class Test {
         surucu1.aracıTeslimAl(istasyon1,arac1);
 
 
+
         System.out.println(arac1.getSofor());
         System.out.println(arac1.toString());
         System.out.println("**********");

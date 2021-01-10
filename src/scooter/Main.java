@@ -4,13 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    /** test */ /*static ArrayList<String> kullanıcıAdıArrayList = new ArrayList<>();
-    static ArrayList<String> kullanıcıSifresiArrayList = new ArrayList<>();
-    public static void kullanıcıEklendi(Kullanıcılar k) {
-        kullanıcıAdıArrayList.add(k.getKullaniciAdi());
-        kullanıcıSifresiArrayList.add(k.getKullanıcıSirfesi());
-    }
-    */
+
 
     static boolean fotoCekimi(char EH){
         if (EH == 'E' | EH == 'e'){
@@ -34,12 +28,7 @@ public class Main {
         Suruculer surucu1 = new Suruculer("Ahmet", "Kalafat", "garlicman", "123ahmet");
         Yonetici yonetici = new Yonetici("Abuzer", "Abuzeroğlu", "abuzettin", "123admin");
 
-        /** test */ /*kullanıcıEklendi(surucu1);
-        kullanıcıEklendi(yonetici);
-        for (int i = 0; i < kullanıcıAdıArrayList.size(); i++) {
-            System.out.println(kullanıcıAdıArrayList.get(i).toString());
-        }
-        */
+
 
         /** Kullanıcı İşlemleri */
 
@@ -48,8 +37,22 @@ public class Main {
             System.out.println("Lütfen kullanıcı adınızı ve şifrenizi giriniz.");
             System.out.print("Kullanıcı Adı: ");
             String kAdı = scan.next();
-            System.out.print("Şifre: ");
-            String kSifre = scan.next();
+
+
+            if (kAdı.equals(yonetici.getKullaniciAdi())){
+                System.out.print("Şifre: ");
+                String kSifre = scan.next();
+                if  (kSifre.equals(yonetici.getKullanıcıSirfesi())){
+
+                }
+            }else if(kAdı.equals(surucu1.getKullaniciAdi())){
+                System.out.print("Şifre: ");
+                String kSifre = scan.next();
+                if (kSifre.equals(surucu1.getKullaniciAdi())){
+
+                }
+            }
+
 
 
 
@@ -68,9 +71,6 @@ public class Main {
                     bitir = false;
                     break;
             }
-
         }
-
-
     }
 }
