@@ -21,7 +21,7 @@ public class Araclar {
 
     @Override
     public String toString() {
-        return "Araclar{" +
+        return "Arac{" +
                 "renk='" + renk + '\'' +
                 ", hız=" + hız +
                 ", sofor=" + sofor +

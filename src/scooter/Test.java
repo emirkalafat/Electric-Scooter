@@ -15,11 +15,15 @@ public class Test {
         Araclar arac4 =new Araclar("mavi",20);
         Araclar arac5 =new Araclar("yeşil",35);
         Suruculer surucu1 =new Suruculer("Ahmet", "Kalafat","garlicman","123ahmet");
+        Yonetici yonetici = new Yonetici("Abuzer", "Abuzeroğlu", "abuzettin", "123admin");
+
         istasyon1.aracEkle(arac1);
         istasyon1.aracEkle(arac2);
         istasyon1.aracEkle(arac3);
         istasyon2.aracEkle(arac4);
         istasyon1.araclarıListele();
+        yonetici.aracEkle(istasyon2,arac5);
+        yonetici.aracKaldır(istasyon2,arac5);
         surucu1.bakiyeYukle(10);
         surucu1.aracıTeslimAl(istasyon1,arac1);
 
