@@ -24,33 +24,45 @@ public class Test {
         istasyon1.aracEkle(arac2);
         istasyon2.aracEkle(arac3);
         istasyon1.aracEkle(arac4);
-        //  istasyon1.aracEkle(arac3);
+
+        System.out.println("***************************");
+        istasyon1.aracEkle(arac3);
+        System.out.println("***************************");
+
 
         surucu3.bakiyeYukle(20);
         System.out.println("***************************");
         istasyon1.araclariListele();
         istasyon2.araclariListele();
         istasyon3.araclariListele();
+
         System.out.println("***************************");
         surucu3.araciTeslimAl(istasyon1);
+
         System.out.println("***************************");
         istasyon1.araclariListele();
         istasyon2.araclariListele();
         istasyon3.araclariListele();
         System.out.println("***************************");
+
         yonetici.kullaniciBilgileriniGetir(surucu3);
+
         System.out.println("***************************");
         istasyon1.araclariListele();
         istasyon2.araclariListele();
         istasyon3.araclariListele();
         System.out.println("***************************");
+
         yonetici.aracKaldir(istasyon1);
+
         System.out.println("***************************");
         istasyon1.araclariListele();
         istasyon2.araclariListele();
         istasyon3.araclariListele();
         System.out.println("***************************");
+
         surucu3.araciTeslimEt(istasyon3);
+
         System.out.println("***************************");
         istasyon1.araclariListele();
         istasyon2.araclariListele();
