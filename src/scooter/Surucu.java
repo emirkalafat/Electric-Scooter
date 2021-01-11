@@ -7,6 +7,7 @@ import java.util.Scanner;
  */
 public class Surucu extends Kullanici {
     private Araclar araclar;
+
     public Surucu(String adi, String soyadi, String kullaniciAdi, String kullaniciSifresi) {
         super(adi, soyadi, kullaniciAdi, kullaniciSifresi);
         this.araclar = null;
@@ -54,7 +55,7 @@ public class Surucu extends Kullanici {
             System.out.println("Scooterınızı teslim ediyorsunuz!");
             this.setBakiye(this.getBakiye() - fiyat.tarifeHesabi());
             System.out.println("Scooter başarıyla teslim edildi!" +
-                    "\n yeni bakiyeniz : "+this.getBakiye());
+                    "\n yeni bakiyeniz : " + this.getBakiye());
 
             if (this.getBakiye() < 0) {
                 System.out.println("bakiyeniz eksiye düştü. En kısa zamanda para yükleyiniz.");

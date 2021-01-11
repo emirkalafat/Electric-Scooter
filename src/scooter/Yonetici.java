@@ -24,7 +24,7 @@ public class Yonetici extends Kullanici {
         if (istasyon.getAracListesi().contains(araclar)) {
             String mesaj = "******************************************************************************************" +
                     "\n" + istasyon.getAracListesi().get(istasyon.getAracListesi().indexOf(araclar)) + " Özelliklerine sahip scooterı kaldırdınız. ";
-            sifreDenetimi(istasyon,araclar,mesaj);
+            sifreDenetimi(istasyon, araclar, mesaj);
             istasyon.aracKaldir(araclar);
             System.out.println(araclar + " " + istasyon + " istasyonundan başarıyla kaldırıldı.");
         } else {
@@ -47,7 +47,7 @@ public class Yonetici extends Kullanici {
                     case 'E' | 'e':
                         String mesaj = "******************************************************************************************" +
                                 "\n" + istasyon.getAracListesi().get(i).istasyondakiArac() + " Özelliklerine sahip scooterı kaldırdınız. ";
-                        sifreDenetimi(istasyon, i,mesaj );
+                        sifreDenetimi(istasyon, i, mesaj);
                         return;
                     case 'H' | 'h':
                         System.out.println("Araç kaldırılmadı.");

@@ -20,7 +20,7 @@ public class Istasyon {
         if (a.getIstasyon() == null) {
             this.aracListesi.add(a);
             a.setIstasyon(this);
-        }else {
+        } else {
             System.out.println("Belirtilen scooter zaten bir istasyonda mevcut.");
             /* !!!MANTIKSIZ İŞLEM!!!! scooter bi anda diğer istasyona ışınlanamaz */
             /* \n belirtilen scooterı " + this.toString() + " istasyona taşımak ister misiniz?");
@@ -40,7 +40,8 @@ public class Istasyon {
             }*/
         }
     }
-    void aracKaldir(Araclar a){
+
+    void aracKaldir(Araclar a) {
         this.aracListesi.remove(a);
         a.setIstasyon(null);
     }
@@ -58,7 +59,7 @@ public class Istasyon {
     @Override
     public String toString() {
         return " il='" + il + '\'' +
-                ", ilçe='" + ilce + '\'' ;
+                ", ilçe='" + ilce + '\'';
 
 
     }

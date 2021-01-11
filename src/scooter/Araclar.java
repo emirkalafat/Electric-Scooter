@@ -35,7 +35,7 @@ public class Araclar {
                 '}';
     }
 
-    public String istasyondakiArac(){
+    public String istasyondakiArac() {
         return "Scooter{" +
                 "renk='" + renk + '\'' +
                 ", hız=" + hiz +

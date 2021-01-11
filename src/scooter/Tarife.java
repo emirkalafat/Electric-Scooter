@@ -5,13 +5,15 @@ import java.util.Scanner;
 
 public class Tarife {
     Scanner scanner = new Scanner(System.in);
+
     public boolean fotocekimi() {
         //Scanner scanner = new Scanner(System.in);
         System.out.print("Scooterın fotoğrafını çekiniz! [Çektim] ");
         char EH = scanner.next().charAt(0);
         return EH == 'ç' | EH == 'Ç';
     }
-    public int sureHesabi(){
+
+    public int sureHesabi() {
         //Scanner scanner = new Scanner(System.in);
         System.out.print("Aracı kaç dakika kullandınız? [dakika cinsinden değer] ");
         return scanner.nextInt();
