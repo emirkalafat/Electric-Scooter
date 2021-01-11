@@ -1,6 +1,6 @@
 package scooter;
+
 /**
- *
  * @author emirklft
  */
 public class Araclar {
@@ -14,6 +14,15 @@ public class Araclar {
         this.hız = hız;
         this.sofor = null;
         this.istasyon = null;
+    }
+
+    public String soforBilgileriYadır() {
+        if (this.getSofor() == null)
+            if (this.getIstasyon() == null)
+                return "Bu scooter depoda beklemektedir. Herhangi bir istasyonda bulunmadığı için kullanıcılar bu scooterı kullanamaz. ";
+            else
+                return "Bu scooterın sürücüsü bulunmamaktadır. " + this.getIstasyon().toString() + " istasyonunda bulunmaktadır.";
+        else return this.toString() + " özelliklrine sahip scooterın mevcut sürücüsü : " + this.getSofor();
     }
 
     @Override

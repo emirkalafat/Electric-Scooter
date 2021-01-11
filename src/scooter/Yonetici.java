@@ -25,4 +25,7 @@ public class Yonetici extends Kullanıcılar {
             System.out.println("Belirtilen scooter istasyonda bulunmamaktadır!");
         }
     }
+    public void kullanıcıBilgileriniGetir(Kullanıcılar kullanıcılar){
+        System.out.println(kullanıcılar.toString());
+    }
 }

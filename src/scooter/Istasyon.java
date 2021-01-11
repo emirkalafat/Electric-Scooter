@@ -1,6 +1,7 @@
 package scooter;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  * @author emirklft
@@ -16,8 +17,28 @@ public class Istasyon {
     }
 
     void aracEkle(Araclar a) {
-        this.aracListesi.add(a);
-        a.setIstasyon(this);
+        if (a.getIstasyon() == null) {
+            this.aracListesi.add(a);
+            a.setIstasyon(this);
+        }else {
+            System.out.println("Belirtilen scooter zaten bir istasyonda mevcut.");
+            /** !!!MANTIKSIZ İŞLEM!!!! scooter bi anda diğer istasyona ışınlanamaz */
+            /* \n belirtilen scooterı " + this.toString() + " istasyona taşımak ister misiniz?");
+            Scanner scan = new Scanner(System.in);
+            Character girdi = scan.next().charAt(0);
+            switch (girdi) {
+                case 'E' | 'e':
+                    a.getIstasyon().aracListesi.remove(a);
+                    this.aracListesi.add(a);
+                    a.setIstasyon(this);
+                    break;
+                case 'H' | 'h':
+                    break;
+                default:
+                    System.out.println("Geçersiz işlem!");
+                    break;
+            }*/
+        }
     }
     void aracKaldır(Araclar a){
         this.aracListesi.remove(a);

@@ -13,7 +13,7 @@ public class Suruculer extends Kullanıcılar {
     public void aracıTeslimAl(Istasyon bulunduguYer, Araclar arac) {
         if (this.getBakiye() > 0) {
             if (bulunduguYer.getAracListesi().size() != 0) {
-                System.out.println("Lütfen kurallara uyunuz! Keyifli sürüşler. ");
+                System.out.println(arac.toString()+" Özelliklerine sahip scooterı kiraladınız. Lütfen kurallara uyunuz! Keyifli sürüşler. Scooteri teslim ederken fotoğrafını çekip sisteme yüklemeyi unutmayın!");
                 arac.setSofor(this);
                 bulunduguYer.getAracListesi().remove(arac);
 
