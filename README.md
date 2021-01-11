@@ -16,4 +16,4 @@ ____
 
 
 ___
-### Bu uygulamada başna neler olması planlanıyor?
+### Bu uygulamada başka neler olması planlanıyor?
