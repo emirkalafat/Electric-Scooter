@@ -11,6 +11,7 @@ public class Yonetici extends Kullanıcılar {
         this.setKullaniciTuru("admin");
     }
 
+
     public void aracEkle(Istasyon istasyon, Araclar araclar){
         araclar.setIstasyon(istasyon);
         istasyon.aracEkle(araclar);

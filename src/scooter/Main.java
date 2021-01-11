@@ -6,12 +6,12 @@ import java.util.Scanner;
 public class Main {
 
 
-    static boolean fotoCekimi(char EH){
-        if (EH == 'E' | EH == 'e'){
+    static boolean fotoCekimi(char EH) {
+        if (EH == 'E' | EH == 'e') {
             return true;
-        }
-        else return false;
+        } else return false;
     }
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         boolean bitir = false;
@@ -29,7 +29,6 @@ public class Main {
         Yonetici yonetici = new Yonetici("Abuzer", "Abuzeroğlu", "abuzettin", "123admin");
 
 
-
         /** Kullanıcı İşlemleri */
 
         while (!bitir) {
@@ -39,21 +38,39 @@ public class Main {
             String kAdı = scan.next();
 
 
-            if (kAdı.equals(yonetici.getKullaniciAdi())){
+            if (kAdı.equals(yonetici.getKullaniciAdi())) {
                 System.out.print("Şifre: ");
                 String kSifre = scan.next();
-                if  (kSifre.equals(yonetici.getKullanıcıSirfesi())){
-
+                if (kSifre.equals(yonetici.getKullanıcıSirfesi())) {
+                    System.out.println("Yapmak istediğiniz işlemi belirtin: ");
                 }
-            }else if(kAdı.equals(surucu1.getKullaniciAdi())){
+            } else if (kAdı.equals(surucu1.getKullaniciAdi())) {
                 System.out.print("Şifre: ");
                 String kSifre = scan.next();
-                if (kSifre.equals(surucu1.getKullaniciAdi())){
+                if (kSifre.equals(surucu1.getKullaniciAdi())) {
+                    System.out.println("Yapmak istediğiniz işlemi seçiniz: " +
+                            "[1] bakiye yükleme." +
+                            "[2] araç kiralama." +
+                            "[3] araç teslim etme.");
+                    int girdi = scan.nextInt();
+                    switch (girdi) {
+                        case 1:
+                            System.out.println("Hesabınızda " + surucu1.getBakiye() + "TL vardır. Yüklemek istediğiniz miktarı girin:");
+                            int miktar = scan.nextInt();
+                            surucu1.bakiyeYukle(miktar);
+                            System.out.println("Yeni bakiyeniz: " + surucu1.getBakiye() + "TL");
+                            break;
+                        case 2:
+
+                        case 3:
+                        default:
+                            System.out.println("HATALI GİRİŞ.");
+                            break;
+
+                    }
 
                 }
             }
-
-
 
 
             /** Son İşlem */
