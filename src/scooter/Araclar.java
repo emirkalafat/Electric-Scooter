@@ -27,11 +27,18 @@ public class Araclar {
 
     @Override
     public String toString() {
-        return "Arac{" +
+        return "Scooter{" +
                 "renk='" + renk + '\'' +
                 ", hız=" + hız +
                 ", sofor=" + sofor +
                 ", istasyon=" + istasyon +
+                '}';
+    }
+
+    public String istasyondakiArac(){
+        return "Scooter{" +
+                "renk='" + renk + '\'' +
+                ", hız=" + hız+
                 '}';
     }
 

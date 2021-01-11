@@ -1,20 +1,50 @@
 package scooter;
 
-import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  * @author emirklft
  */
 public class Kullanıcılar {
-    private String adi, soyadi, kullaniciAdi, kullaniciTuru, kullanıcıSirfesi;
+    private String adi, soyadi, kullaniciAdi, kullaniciTuru, kullanıcıSifresi;
     private int bakiye;
     private boolean aracEklemeYetkisi, aracKaldırmaYetkisi;
 
-    public Kullanıcılar(String adi, String soyadi, String kullaniciAdi, String kullanıcıSirfesi) {
+    public void sifreDenetimi(Istasyon istasyon, int i, String mesaj) {
+        System.out.print("Şifrenizi giriniz: ");
+        Scanner scan = new Scanner(System.in);
+        String sifre = scan.next();
+        if (this.getKullanıcıSifresi().equals(sifre)) {
+            System.out.println(mesaj);
+            if (this.kullaniciTuru.equals("şöför")) {
+                ((Suruculer) this).setAraclar(istasyon.getAracListesi().get(i));
+                istasyon.getAracListesi().get(i).setSofor((Suruculer) this);
+            }
+            istasyon.getAracListesi().remove(i);
+        } else {
+            System.out.println("Şifreniz Yanlış!!");
+            sifreDenetimi(istasyon, i, mesaj);
+        }
+    }
+
+    public void sifreDenetimi(Istasyon istasyon, Araclar araclar, String mesaj) {
+        System.out.print("Şifrenizi giriniz: ");
+        Scanner scan = new Scanner(System.in);
+        String sifre = scan.next();
+        if (this.getKullanıcıSifresi().equals(sifre)) {
+            System.out.println(mesaj);
+            istasyon.aracKaldır(araclar);
+        } else {
+            System.out.println("Şifreniz Yanlış!!");
+            sifreDenetimi(istasyon, araclar, mesaj);
+        }
+    }
+
+    public Kullanıcılar(String adi, String soyadi, String kullaniciAdi, String kullanıcıSifresi) {
         this.adi = adi;
         this.soyadi = soyadi;
         this.kullaniciAdi = kullaniciAdi;
-        this.kullanıcıSirfesi = kullanıcıSirfesi;
+        this.kullanıcıSifresi = kullanıcıSifresi;
         this.kullaniciTuru = "şöför";
         this.aracEklemeYetkisi = false;
         this.aracKaldırmaYetkisi = false;
@@ -37,12 +67,12 @@ public class Kullanıcılar {
                 '}';
     }
 
-    public String getKullanıcıSirfesi() {
-        return kullanıcıSirfesi;
+    public String getKullanıcıSifresi() {
+        return kullanıcıSifresi;
     }
 
-    public void setKullanıcıSirfesi(String kullanıcıSirfesi) {
-        this.kullanıcıSirfesi = kullanıcıSirfesi;
+    public void setKullanıcıSifresi(String kullanıcıSifresi) {
+        this.kullanıcıSifresi = kullanıcıSifresi;
     }
 
     public int getBakiye() {

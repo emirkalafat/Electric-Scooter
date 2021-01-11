@@ -1,21 +1,45 @@
 package scooter;
 
+import java.util.Scanner;
+
 /**
  * @author emirklft
  */
 public class Suruculer extends Kullanıcılar {
-
+    private Araclar araclar;
     public Suruculer(String adi, String soyadi, String kullaniciAdi, String kullanıcıSifresi) {
         super(adi, soyadi, kullaniciAdi, kullanıcıSifresi);
-
+        this.araclar = null;
     }
 
-    public void aracıTeslimAl(Istasyon bulunduguYer, Araclar arac) {
+    public void aracıTeslimAl(Istasyon bulunduguYer) {
         if (this.getBakiye() > 0) {
             if (bulunduguYer.getAracListesi().size() != 0) {
-                System.out.println(arac.toString()+" Özelliklerine sahip scooterı kiraladınız. Lütfen kurallara uyunuz! Keyifli sürüşler. Scooteri teslim ederken fotoğrafını çekip sisteme yüklemeyi unutmayın!");
-                arac.setSofor(this);
-                bulunduguYer.getAracListesi().remove(arac);
+                System.out.println("İstasyonda bulunan araçlar : ");
+                for (int i = 0; i < bulunduguYer.getAracListesi().size(); i++) {
+                    System.out.println(i + 1 + ". " + bulunduguYer.getAracListesi().get(i).istasyondakiArac());
+                }
+                for (int i = 0; i < bulunduguYer.getAracListesi().size(); i++) {
+                    System.out.println("\n" + (i + 1) + ". " + bulunduguYer.getAracListesi().get(i).istasyondakiArac());
+                    System.out.println("Bu aracı almak ister misiniz? [Evet/Hayır]");
+                    Scanner scan = new Scanner(System.in);
+                    Character girdi = scan.next().charAt(0);
+                    switch (girdi) {
+                        case 'E' | 'e':
+                            String mesaj = "******************************************************************************************" +
+                                    "\n" + bulunduguYer.getAracListesi().get(i).istasyondakiArac() + " Özelliklerine sahip scooterı kiraladınız. " +
+                                    "\nLütfen kurallara uyunuz! Keyifli sürüşler. Scooteri teslim ederken fotoğrafını çekip sisteme yüklemeyi unutmayın!";
+                            sifreDenetimi(bulunduguYer, i, mesaj);
+                            return;
+                        case 'H' | 'h':
+                            System.out.println("Araç alınmadı.");
+                            break;
+                        default:
+                            System.out.println("Geçersiz işlem. Ana menüye dönülüyor!");
+                            break;
+                    }
+                }
+
 
             } else {
                 System.out.println("Bulunduğunuz istasyonda scooter mevcut değildir!!");
@@ -24,23 +48,32 @@ public class Suruculer extends Kullanıcılar {
 
     }
 
-    public void aracıTeslimEt(Araclar araclar, Istasyon gidecegiYer, int kullanımSüresiDAKİKA, boolean fotoCekimi) {
-        if (araclar.getSofor() != null) {
+    public void aracıTeslimEt(Istasyon gidecegiYer, int kullanımSüresiDAKİKA) {
+        if (araclar != null) {
             Tarife fiyat = new Tarife();
+            System.out.println("Scooterınızı teslim ediyorsunuz!");
+            this.setBakiye(this.getBakiye() - fiyat.tarifeHesabı(kullanımSüresiDAKİKA));
+            System.out.println("Scooter başarıyla teslim edildi!" +
+                    "\n yeni bakiyeniz : "+this.getBakiye());
 
-            this.setBakiye(this.getBakiye() - fiyat.tarifeHesabı(kullanımSüresiDAKİKA,fotoCekimi));
-            System.out.println("Scooter başarıyla teslim edildi!");
             if (this.getBakiye() < 0) {
                 System.out.println("bakiyeniz eksiye düştü. En kısa zamanda para yükleyiniz.");
             }
-            araclar.setIstasyon(gidecegiYer);
+
+            this.getAraclar().setIstasyon(gidecegiYer);
             gidecegiYer.getAracListesi().add(araclar);
-            araclar.setSofor(null);
+            this.getAraclar().setSofor(null);
         } else {
             System.out.println("HATALI İŞLEM. Herhangi bir scooter kiralamadınız!!");
         }
 
     }
 
+    public Araclar getAraclar() {
+        return araclar;
+    }
 
+    public void setAraclar(Araclar araclar) {
+        this.araclar = araclar;
+    }
 }

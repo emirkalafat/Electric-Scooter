@@ -1,11 +1,28 @@
 package scooter;
 
 
-public class Tarife {
+import java.util.Scanner;
 
-    public int tarifeHesabı(int kullanımSüresi, boolean fotoCekildiMi) {
-        if (fotoCekildiMi) {
-            switch (kullanımSüresi / 60) {
+public class Tarife {
+    Scanner scanner = new Scanner(System.in);
+    public boolean fotocekimi() {
+        //Scanner scanner = new Scanner(System.in);
+        System.out.print("Scooterın fotoğrafını çekiniz! [Çektim] ");
+        char EH = scanner.next().charAt(0);
+        if (EH == 'ç' | EH == 'Ç')
+            return true;
+        else return false;
+    }
+    public int sureHesabi(){
+        //Scanner scanner = new Scanner(System.in);
+        System.out.print("Aracı kaç dakika kullandınız? [dakika cinsinden değer] ");
+        int sure;
+        return sure = scanner.nextInt();
+    }
+
+    public int tarifeHesabı(int kullanımSüresi) {
+        if (fotocekimi()) {
+            switch (sureHesabi() / 60) {
                 case 0:
                     return 4;
                 case 1:
@@ -22,7 +39,7 @@ public class Tarife {
                     return 30;
             }
         } else {
-            switch (kullanımSüresi / 60) {
+            switch (sureHesabi() / 60) {
                 case 0:
                     return 10;
                 case 1:

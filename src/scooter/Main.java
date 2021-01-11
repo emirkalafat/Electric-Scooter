@@ -1,6 +1,5 @@
 package scooter;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -41,7 +40,7 @@ public class Main {
             if (kAdı.equals(yonetici.getKullaniciAdi())) {
                 System.out.print("Şifre: ");
                 String kSifre = scan.next();
-                if (kSifre.equals(yonetici.getKullanıcıSirfesi())) {
+                if (kSifre.equals(yonetici.getKullanıcıSifresi())) {
                     System.out.println("Yapmak istediğiniz işlemi belirtin: ");
                 }
             } else if (kAdı.equals(surucu1.getKullaniciAdi())) {
