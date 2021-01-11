@@ -5,14 +5,14 @@ import java.util.Scanner;
 /**
  * @author emirklft
  */
-public class Suruculer extends Kullanıcılar {
+public class Surucu extends Kullanici {
     private Araclar araclar;
-    public Suruculer(String adi, String soyadi, String kullaniciAdi, String kullanıcıSifresi) {
-        super(adi, soyadi, kullaniciAdi, kullanıcıSifresi);
+    public Surucu(String adi, String soyadi, String kullaniciAdi, String kullaniciSifresi) {
+        super(adi, soyadi, kullaniciAdi, kullaniciSifresi);
         this.araclar = null;
     }
 
-    public void aracıTeslimAl(Istasyon bulunduguYer) {
+    public void araciTeslimAl(Istasyon bulunduguYer) {
         if (this.getBakiye() > 0) {
             if (bulunduguYer.getAracListesi().size() != 0) {
                 System.out.println("İstasyonda bulunan araçlar : ");
@@ -48,11 +48,11 @@ public class Suruculer extends Kullanıcılar {
 
     }
 
-    public void aracıTeslimEt(Istasyon gidecegiYer, int kullanımSüresiDAKİKA) {
+    public void araciTeslimEt(Istasyon gidecegiYer) {
         if (araclar != null) {
             Tarife fiyat = new Tarife();
             System.out.println("Scooterınızı teslim ediyorsunuz!");
-            this.setBakiye(this.getBakiye() - fiyat.tarifeHesabı(kullanımSüresiDAKİKA));
+            this.setBakiye(this.getBakiye() - fiyat.tarifeHesabi());
             System.out.println("Scooter başarıyla teslim edildi!" +
                     "\n yeni bakiyeniz : "+this.getBakiye());
 

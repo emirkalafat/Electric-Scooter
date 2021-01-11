@@ -24,7 +24,7 @@ public class Main {
         Araclar arac3 = new Araclar("kırmızı", 20);
         Araclar arac4 = new Araclar("mavi", 20);
         Araclar arac5 = new Araclar("yeşil", 35);
-        Suruculer surucu1 = new Suruculer("Ahmet", "Kalafat", "garlicman", "123ahmet");
+        Surucu surucu1 = new Surucu("Ahmet", "Kalafat", "garlicman", "123ahmet");
         Yonetici yonetici = new Yonetici("Abuzer", "Abuzeroğlu", "abuzettin", "123admin");
 
 
@@ -40,7 +40,7 @@ public class Main {
             if (kAdı.equals(yonetici.getKullaniciAdi())) {
                 System.out.print("Şifre: ");
                 String kSifre = scan.next();
-                if (kSifre.equals(yonetici.getKullanıcıSifresi())) {
+                if (kSifre.equals(yonetici.getKullaniciSifresi())) {
                     System.out.println("Yapmak istediğiniz işlemi belirtin: ");
                 }
             } else if (kAdı.equals(surucu1.getKullaniciAdi())) {

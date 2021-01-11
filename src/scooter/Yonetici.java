@@ -5,11 +5,11 @@ import java.util.Scanner;
 /**
  * @author emirklft
  */
-public class Yonetici extends Kullanıcılar {
-    public Yonetici(String adi, String soyadi, String kullaniciAdi, String kullanıcıSifresi) {
-        super(adi, soyadi, kullaniciAdi, kullanıcıSifresi);
+public class Yonetici extends Kullanici {
+    public Yonetici(String adi, String soyadi, String kullaniciAdi, String kullaniciSifresi) {
+        super(adi, soyadi, kullaniciAdi, kullaniciSifresi);
         this.setAracEklemeYetkisi(true);
-        this.setAracKaldırmaYetkisi(true);
+        this.setAracKaldirmaYetkisi(true);
         this.setKullaniciTuru("admin");
     }
 
@@ -20,19 +20,19 @@ public class Yonetici extends Kullanıcılar {
         System.out.println(araclar + " " + istasyon + " istasyonuna başarıyla eklendi.");
     }
 
-    public void aracKaldır(Istasyon istasyon, Araclar araclar) {
+    public void aracKaldir(Istasyon istasyon, Araclar araclar) {
         if (istasyon.getAracListesi().contains(araclar)) {
             String mesaj = "******************************************************************************************" +
                     "\n" + istasyon.getAracListesi().get(istasyon.getAracListesi().indexOf(araclar)) + " Özelliklerine sahip scooterı kaldırdınız. ";
             sifreDenetimi(istasyon,araclar,mesaj);
-            istasyon.aracKaldır(araclar);
+            istasyon.aracKaldir(araclar);
             System.out.println(araclar + " " + istasyon + " istasyonundan başarıyla kaldırıldı.");
         } else {
             System.out.println("Belirtilen scooter istasyonda bulunmamaktadır!");
         }
     }
 
-    public void aracKaldır(Istasyon istasyon) {
+    public void aracKaldir(Istasyon istasyon) {
         if (istasyon.getAracListesi().size() != 0) {
             System.out.println("İstasyonda bulunan araçlar : ");
             for (int i = 0; i < istasyon.getAracListesi().size(); i++) {
@@ -60,7 +60,7 @@ public class Yonetici extends Kullanıcılar {
         }
     }
 
-    public void kullanıcıBilgileriniGetir(Kullanıcılar kullanıcılar) {
-        System.out.println(kullanıcılar.toString());
+    public void kullaniciBilgileriniGetir(Kullanici kullanici) {
+        System.out.println(kullanici.toString());
     }
 }

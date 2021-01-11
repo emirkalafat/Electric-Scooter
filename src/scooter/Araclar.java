@@ -5,18 +5,18 @@ package scooter;
  */
 public class Araclar {
     private String renk;
-    private int hız;
-    private Suruculer sofor;
+    private int hiz;
+    private Surucu sofor;
     private Istasyon istasyon;
 
-    public Araclar(String renk, int hız) {
+    public Araclar(String renk, int hiz) {
         this.renk = renk;
-        this.hız = hız;
+        this.hiz = hiz;
         this.sofor = null;
         this.istasyon = null;
     }
 
-    public String soforBilgileriYadır() {
+    public String soforBilgileriYazdir() {
         if (this.getSofor() == null)
             if (this.getIstasyon() == null)
                 return "Bu scooter depoda beklemektedir. Herhangi bir istasyonda bulunmadığı için kullanıcılar bu scooterı kullanamaz. ";
@@ -29,7 +29,7 @@ public class Araclar {
     public String toString() {
         return "Scooter{" +
                 "renk='" + renk + '\'' +
-                ", hız=" + hız +
+                ", hız=" + hiz +
                 ", sofor=" + sofor +
                 ", istasyon=" + istasyon +
                 '}';
@@ -38,7 +38,7 @@ public class Araclar {
     public String istasyondakiArac(){
         return "Scooter{" +
                 "renk='" + renk + '\'' +
-                ", hız=" + hız+
+                ", hız=" + hiz +
                 '}';
     }
 
@@ -50,11 +50,11 @@ public class Araclar {
         this.istasyon = istasyon;
     }
 
-    public Suruculer getSofor() {
+    public Surucu getSofor() {
         return sofor;
     }
 
-    public void setSofor(Suruculer sofor) {
+    public void setSofor(Surucu sofor) {
         this.sofor = sofor;
     }
 
@@ -66,11 +66,11 @@ public class Araclar {
         this.renk = renk;
     }
 
-    public int getHız() {
-        return hız;
+    public int getHiz() {
+        return hiz;
     }
 
-    public void setHız(int hız) {
-        this.hız = hız;
+    public void setHiz(int hiz) {
+        this.hiz = hiz;
     }
 }

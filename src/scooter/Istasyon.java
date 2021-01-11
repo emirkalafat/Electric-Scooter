@@ -1,19 +1,19 @@
 package scooter;
 
 import java.util.ArrayList;
-import java.util.Scanner;
+
 
 /**
  * @author emirklft
  */
 
 public class Istasyon {
-    private String il, ilçe;
+    private String il, ilce;
     private ArrayList<Araclar> aracListesi = new ArrayList<>();
 
-    public Istasyon(String il, String ilçe) {
+    public Istasyon(String il, String ilce) {
         this.il = il;
-        this.ilçe = ilçe;
+        this.ilce = ilce;
     }
 
     void aracEkle(Araclar a) {
@@ -22,7 +22,7 @@ public class Istasyon {
             a.setIstasyon(this);
         }else {
             System.out.println("Belirtilen scooter zaten bir istasyonda mevcut.");
-            /** !!!MANTIKSIZ İŞLEM!!!! scooter bi anda diğer istasyona ışınlanamaz */
+            /* !!!MANTIKSIZ İŞLEM!!!! scooter bi anda diğer istasyona ışınlanamaz */
             /* \n belirtilen scooterı " + this.toString() + " istasyona taşımak ister misiniz?");
             Scanner scan = new Scanner(System.in);
             Character girdi = scan.next().charAt(0);
@@ -40,25 +40,25 @@ public class Istasyon {
             }*/
         }
     }
-    void aracKaldır(Araclar a){
+    void aracKaldir(Araclar a){
         this.aracListesi.remove(a);
         a.setIstasyon(null);
     }
 
-    void araclarıListele() {
+    void araclariListele() {
 
         if (this.aracListesi.size() != 0) {
-            System.out.println(this.getIl() + " " + this.getIlçe() + " istasyonundaki araçlar: ");
+            System.out.println(this.getIl() + " " + this.getIlce() + " istasyonundaki araçlar: ");
             for (int i = 0; i < this.aracListesi.size(); i++) {
                 System.out.println("[" + i + "] " + aracListesi.get(i));
             }
-        } else System.out.println(this.getIl() + " " + this.getIlçe() + " istasyonda araç yoktur.");
+        } else System.out.println(this.getIl() + " " + this.getIlce() + " istasyonda araç yoktur.");
     }
 
     @Override
     public String toString() {
         return " il='" + il + '\'' +
-                ", ilçe='" + ilçe + '\'' ;
+                ", ilçe='" + ilce + '\'' ;
 
 
     }
@@ -79,11 +79,11 @@ public class Istasyon {
         this.il = il;
     }
 
-    public String getIlçe() {
-        return ilçe;
+    public String getIlce() {
+        return ilce;
     }
 
-    public void setIlçe(String ilçe) {
-        this.ilçe = ilçe;
+    public void setIlce(String ilce) {
+        this.ilce = ilce;
     }
 }

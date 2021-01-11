@@ -9,18 +9,15 @@ public class Tarife {
         //Scanner scanner = new Scanner(System.in);
         System.out.print("Scooterın fotoğrafını çekiniz! [Çektim] ");
         char EH = scanner.next().charAt(0);
-        if (EH == 'ç' | EH == 'Ç')
-            return true;
-        else return false;
+        return EH == 'ç' | EH == 'Ç';
     }
     public int sureHesabi(){
         //Scanner scanner = new Scanner(System.in);
         System.out.print("Aracı kaç dakika kullandınız? [dakika cinsinden değer] ");
-        int sure;
-        return sure = scanner.nextInt();
+        return scanner.nextInt();
     }
 
-    public int tarifeHesabı(int kullanımSüresi) {
+    public int tarifeHesabi() {
         if (fotocekimi()) {
             switch (sureHesabi() / 60) {
                 case 0:
