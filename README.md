@@ -9,11 +9,11 @@ ____
 + İstasyonda kaç scooter olduğunu öğrenebiliriz.
   + Aynı zamanda bu scooterlerın özelliklerini de öğrenebileceğiz.
 + Kullanıcı bulunduğu istasyondan araç alabilecek.
+  + Kullanıcı scooter almadan önce şifresini doğru girmelidir.
   + Adminler araç kullanamaz durumdadır ve scooter kiralamak için şöför hesabına geçmesini istemektedir.
 + Adminler istasyonlara araç ekleyip çıkarabilecek.
+  + Adminler araç kaldırırken şifrelerini doğru girmelidir.
 
 
 ___
 ### Bu uygulamada başna neler olması planlanıyor?
-+ Kullanıcılar kullanıcı adı ve şifresini kullanarak sisteme giriş yapacak ve işlmeler buna göre düzenlenecek.
-+ Kullanıcının bulunduğu istasyonda scooter yoksa diğer istasyonlardaki scooterlerı gösterebilcek.

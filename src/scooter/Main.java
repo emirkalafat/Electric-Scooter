@@ -1,23 +1,16 @@
 package scooter;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    /** test */ /*static ArrayList<String> kullanıcıAdıArrayList = new ArrayList<>();
-    static ArrayList<String> kullanıcıSifresiArrayList = new ArrayList<>();
-    public static void kullanıcıEklendi(Kullanıcılar k) {
-        kullanıcıAdıArrayList.add(k.getKullaniciAdi());
-        kullanıcıSifresiArrayList.add(k.getKullanıcıSirfesi());
-    }
-    */
 
-    static boolean fotoCekimi(char EH){
-        if (EH == 'E' | EH == 'e'){
+
+    static boolean fotoCekimi(char EH) {
+        if (EH == 'E' | EH == 'e') {
             return true;
-        }
-        else return false;
+        } else return false;
     }
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         boolean bitir = false;
@@ -31,15 +24,9 @@ public class Main {
         Araclar arac3 = new Araclar("kırmızı", 20);
         Araclar arac4 = new Araclar("mavi", 20);
         Araclar arac5 = new Araclar("yeşil", 35);
-        Suruculer surucu1 = new Suruculer("Ahmet", "Kalafat", "garlicman", "123ahmet");
+        Surucu surucu1 = new Surucu("Ahmet", "Kalafat", "garlicman", "123ahmet");
         Yonetici yonetici = new Yonetici("Abuzer", "Abuzeroğlu", "abuzettin", "123admin");
 
-        /** test */ /*kullanıcıEklendi(surucu1);
-        kullanıcıEklendi(yonetici);
-        for (int i = 0; i < kullanıcıAdıArrayList.size(); i++) {
-            System.out.println(kullanıcıAdıArrayList.get(i).toString());
-        }
-        */
 
         /** Kullanıcı İşlemleri */
 
@@ -48,9 +35,41 @@ public class Main {
             System.out.println("Lütfen kullanıcı adınızı ve şifrenizi giriniz.");
             System.out.print("Kullanıcı Adı: ");
             String kAdı = scan.next();
-            System.out.print("Şifre: ");
-            String kSifre = scan.next();
 
+
+            if (kAdı.equals(yonetici.getKullaniciAdi())) {
+                System.out.print("Şifre: ");
+                String kSifre = scan.next();
+                if (kSifre.equals(yonetici.getKullaniciSifresi())) {
+                    System.out.println("Yapmak istediğiniz işlemi belirtin: ");
+                }
+            } else if (kAdı.equals(surucu1.getKullaniciAdi())) {
+                System.out.print("Şifre: ");
+                String kSifre = scan.next();
+                if (kSifre.equals(surucu1.getKullaniciAdi())) {
+                    System.out.println("Yapmak istediğiniz işlemi seçiniz: " +
+                            "[1] bakiye yükleme." +
+                            "[2] araç kiralama." +
+                            "[3] araç teslim etme.");
+                    int girdi = scan.nextInt();
+                    switch (girdi) {
+                        case 1:
+                            System.out.println("Hesabınızda " + surucu1.getBakiye() + "TL vardır. Yüklemek istediğiniz miktarı girin:");
+                            int miktar = scan.nextInt();
+                            surucu1.bakiyeYukle(miktar);
+                            System.out.println("Yeni bakiyeniz: " + surucu1.getBakiye() + "TL");
+                            break;
+                        case 2:
+
+                        case 3:
+                        default:
+                            System.out.println("HATALI GİRİŞ.");
+                            break;
+
+                    }
+
+                }
+            }
 
 
             /** Son İşlem */
@@ -68,9 +87,6 @@ public class Main {
                     bitir = false;
                     break;
             }
-
         }
-
-
     }
 }
