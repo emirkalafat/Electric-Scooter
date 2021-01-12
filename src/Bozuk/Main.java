@@ -1,4 +1,9 @@
-package scooter;
+package Bozuk;
+
+import scooter.Araclar;
+import scooter.Istasyon;
+import scooter.Surucu;
+import scooter.Yonetici;
 
 import java.util.Scanner;
 
