@@ -1,4 +1,4 @@
-package Bozuk;
+package Eski;
 
 import scooter.Araclar;
 import scooter.Istasyon;
