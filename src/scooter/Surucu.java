@@ -6,11 +6,11 @@ import java.util.Scanner;
  * @author emirklft
  */
 public class Surucu extends Kullanici {
-    private Araclar araclar;
+    private Araclar surulenArac;
 
     public Surucu(String adi, String soyadi, String kullaniciAdi, String kullaniciSifresi) {
         super(adi, soyadi, kullaniciAdi, kullaniciSifresi);
-        this.araclar = null;
+        this.surulenArac = null;
     }
 
     public void araciTeslimAl(Istasyon bulunduguYer) {
@@ -50,7 +50,7 @@ public class Surucu extends Kullanici {
     }
 
     public void araciTeslimEt(Istasyon gidecegiYer) {
-        if (araclar != null) {
+        if (surulenArac != null) {
             Tarife fiyat = new Tarife();
             System.out.println("Scooterınızı teslim ediyorsunuz!");
             this.setBakiye(this.getBakiye() - fiyat.tarifeHesabi());
@@ -61,20 +61,20 @@ public class Surucu extends Kullanici {
                 System.out.println("bakiyeniz eksiye düştü. En kısa zamanda para yükleyiniz.");
             }
 
-            this.getAraclar().setIstasyon(gidecegiYer);
-            gidecegiYer.getAracListesi().add(araclar);
-            this.getAraclar().setSofor(null);
+            this.getSurulenArac().setIstasyon(gidecegiYer);
+            gidecegiYer.getAracListesi().add(surulenArac);
+            this.getSurulenArac().setSofor(null);
         } else {
             System.out.println("HATALI İŞLEM. Herhangi bir scooter kiralamadınız!!");
         }
 
     }
 
-    public Araclar getAraclar() {
-        return araclar;
+    public Araclar getSurulenArac() {
+        return surulenArac;
     }
 
-    public void setAraclar(Araclar araclar) {
-        this.araclar = araclar;
+    public void setSurulenArac(Araclar surulenArac) {
+        this.surulenArac = surulenArac;
     }
 }

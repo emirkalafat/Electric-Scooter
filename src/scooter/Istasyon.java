@@ -42,16 +42,16 @@ public class Istasyon {
     }
 
     void aracKaldir(Araclar a) {
-        this.aracListesi.remove(a);
+        this.getAracListesi().remove(a);
         a.setIstasyon(null);
     }
 
     void araclariListele() {
 
-        if (this.aracListesi.size() != 0) {
+        if (this.getAracListesi().size() != 0) {
             System.out.println(this.getIl() + " " + this.getIlce() + " istasyonundaki araçlar: ");
-            for (int i = 0; i < this.aracListesi.size(); i++) {
-                System.out.println("[" + i + "] " + aracListesi.get(i));
+            for (int i = 0; i < this.getAracListesi().size(); i++) {
+                System.out.println("[" + i + "] " + getAracListesi().get(i));
             }
         } else System.out.println(this.getIl() + " " + this.getIlce() + " istasyonda araç yoktur.");
     }

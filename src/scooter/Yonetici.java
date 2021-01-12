@@ -8,8 +8,6 @@ import java.util.Scanner;
 public class Yonetici extends Kullanici {
     public Yonetici(String adi, String soyadi, String kullaniciAdi, String kullaniciSifresi) {
         super(adi, soyadi, kullaniciAdi, kullaniciSifresi);
-        this.setAracEklemeYetkisi(true);
-        this.setAracKaldirmaYetkisi(true);
         this.setKullaniciTuru("admin");
     }
 
