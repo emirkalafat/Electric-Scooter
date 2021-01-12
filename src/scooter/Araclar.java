@@ -1,5 +1,4 @@
 package scooter;
-
 /**
  * @author emirklft
  */

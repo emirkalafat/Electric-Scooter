@@ -1,8 +1,9 @@
 package scooter;
 
-
 import java.util.Scanner;
-
+/**
+ * @author emirklft
+ */
 public class Tarife {
     Scanner scanner = new Scanner(System.in);
 

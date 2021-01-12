@@ -1,7 +1,6 @@
 package scooter;
 
 import java.util.Scanner;
-
 /**
  * @author emirklft
  */

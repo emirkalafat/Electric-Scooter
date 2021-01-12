@@ -1,12 +1,9 @@
 package scooter;
 
 import java.util.ArrayList;
-
-
 /**
  * @author emirklft
  */
-
 public class Istasyon {
     private String il, ilce;
     private ArrayList<Araclar> aracListesi = new ArrayList<>();
