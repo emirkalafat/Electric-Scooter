@@ -31,9 +31,9 @@ public class Test2 {
 
         surucu1.araciTeslimAl(istasyon2);
 
-        surucu1.araciTeslimEt(istasyon3);
+        //surucu1.araciTeslimEt(istasyon3);
 
-        surucu1.araciTeslimAl(istasyon3);
+        //surucu1.araciTeslimAl(istasyon3);
 
 
 

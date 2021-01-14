@@ -13,7 +13,7 @@ public class Surucu extends Kullanici {
     }
 
     public void araciTeslimAl(Istasyon bulunduguYer) {
-       if (!this.getSurulenArac().equals(null)) {
+       if (this.getSurulenArac() == null) {
            if (this.getBakiye() > 0) {
                if (bulunduguYer.getAracListesi().size() != 0) {
                    System.out.println("İstasyonda bulunan araçlar : ");
