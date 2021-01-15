@@ -1,14 +1,12 @@
 package scooter;
 
 import java.util.Scanner;
-
 /**
  * @author emirklft
  */
 public class Kullanici {
     private String adi, soyadi, kullaniciAdi, kullaniciTuru, kullaniciSifresi;
     private int bakiye;
-    private boolean aracEklemeYetkisi, aracKaldirmaYetkisi;
 
     public void sifreDenetimi(Istasyon istasyon, int i, String mesaj) {
         System.out.print("Şifrenizi giriniz: ");
@@ -17,7 +15,7 @@ public class Kullanici {
         if (this.getKullaniciSifresi().equals(sifre)) {
             System.out.println(mesaj);
             if (this.kullaniciTuru.equals("şöför")) {
-                ((Surucu) this).setAraclar(istasyon.getAracListesi().get(i));
+                ((Surucu) this).setSurulenArac(istasyon.getAracListesi().get(i));
                 istasyon.getAracListesi().get(i).setSofor((Surucu) this);
             }
             istasyon.getAracListesi().remove(i);
@@ -46,11 +44,9 @@ public class Kullanici {
         this.kullaniciAdi = kullaniciAdi;
         this.kullaniciSifresi = kullaniciSifresi;
         this.kullaniciTuru = "şöför";
-        this.aracEklemeYetkisi = false;
-        this.aracKaldirmaYetkisi = false;
     }
 
-    void bakiyeYukle(int paraTL) {
+    public void bakiyeYukle(int paraTL) {
         if (this.kullaniciTuru.equals("şöför"))
             this.bakiye = this.bakiye + paraTL;
         else System.out.println("Admin hesbı bakiye yüklemeye uygun değildir. Lütfen şöför hesabı ile giriş yapınız.");
@@ -115,19 +111,5 @@ public class Kullanici {
         this.kullaniciTuru = kullaniciTuru;
     }
 
-    public boolean isAracEklemeYetkisi() {
-        return aracEklemeYetkisi;
-    }
 
-    public void setAracEklemeYetkisi(boolean aracEklemeYetkisi) {
-        this.aracEklemeYetkisi = aracEklemeYetkisi;
-    }
-
-    public boolean isAracKaldirmaYetkisi() {
-        return aracKaldirmaYetkisi;
-    }
-
-    public void setAracKaldirmaYetkisi(boolean aracKaldirmaYetkisi) {
-        this.aracKaldirmaYetkisi = aracKaldirmaYetkisi;
-    }
 }

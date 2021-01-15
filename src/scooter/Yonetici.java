@@ -1,15 +1,12 @@
 package scooter;
 
 import java.util.Scanner;
-
 /**
  * @author emirklft
  */
 public class Yonetici extends Kullanici {
     public Yonetici(String adi, String soyadi, String kullaniciAdi, String kullaniciSifresi) {
         super(adi, soyadi, kullaniciAdi, kullaniciSifresi);
-        this.setAracEklemeYetkisi(true);
-        this.setAracKaldirmaYetkisi(true);
         this.setKullaniciTuru("admin");
     }
 
@@ -42,7 +39,7 @@ public class Yonetici extends Kullanici {
                 System.out.println("\n" + (i + 1) + ". " + istasyon.getAracListesi().get(i).istasyondakiArac());
                 System.out.println("Bu aracı istasyondan gerçekten kaldırmak istiyor musunuz? [Evet/Hayır]");
                 Scanner scan = new Scanner(System.in);
-                Character girdi = scan.next().charAt(0);
+                char girdi = scan.next().charAt(0);
                 switch (girdi) {
                     case 'E' | 'e':
                         String mesaj = "******************************************************************************************" +
@@ -62,5 +59,8 @@ public class Yonetici extends Kullanici {
 
     public void kullaniciBilgileriniGetir(Kullanici kullanici) {
         System.out.println(kullanici.toString());
+    }
+    public void aracBilgileriniGetir(Araclar araclar){
+        System.out.println(araclar.toString());
     }
 }

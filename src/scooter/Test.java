@@ -31,12 +31,16 @@ public class Test {
 
 
         surucu3.bakiyeYukle(20);
+
+
         System.out.println("***************************");
         istasyon1.araclariListele();
         istasyon2.araclariListele();
         istasyon3.araclariListele();
 
         System.out.println("***************************");
+
+
         surucu3.araciTeslimAl(istasyon1);
 
         System.out.println("***************************");
@@ -68,5 +72,7 @@ public class Test {
         istasyon2.araclariListele();
         istasyon3.araclariListele();
         System.out.println("***************************");
+
+
     }
 }
