@@ -50,7 +50,7 @@ public class Test2 {
 
         System.out.println(kullanici.toString());
 
-
+        yonetici.istasyonBilgileriniGetir(istasyon1);
 
 
 
