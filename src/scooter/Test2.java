@@ -26,7 +26,7 @@ public class Test2 {
         istasyon2.aracEkle(arac3);
         istasyon1.aracEkle(arac4);
 
-        yonetici.kullaniciBilgileriniGetir(yonetici);
+       /* yonetici.kullaniciBilgileriniGetir(yonetici);
 
         yonetici.bakiyeYukle(10);
 
@@ -40,9 +40,11 @@ public class Test2 {
 
         System.out.println("");
 
+        */
+
         yonetici.aracBilgileriniGetir(arac1);
 
-        System.out.println("");
+        /*System.out.println("");
 
         yonetici.kullaniciBilgileriniGetir(surucu1);
 
@@ -52,7 +54,7 @@ public class Test2 {
 
         yonetici.istasyonBilgileriniGetir(istasyon1);
 
-
+*/
 
 
 
