@@ -49,10 +49,10 @@ public class Kullanici {
     public void bakiyeYukle(int paraTL) {
         if (this.kullaniciTuru.equals("şöför"))
             this.bakiye = this.bakiye + paraTL;
-        else System.out.println("Admin hesbı bakiye yüklemeye uygun değildir. Lütfen şöför hesabı ile giriş yapınız.");
+        else System.out.println("Admin hesabı bakiye yüklemeye uygun değildir. Lütfen şöför hesabı ile giriş yapınız.");
     }
 
-    @Override
+   @Override
     public String toString() {
         return "Kullanici{" +
                 "adi='" + adi + '\'' +

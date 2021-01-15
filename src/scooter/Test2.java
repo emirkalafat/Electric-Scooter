@@ -19,21 +19,40 @@ public class Test2 {
         Surucu surucu2 = new Surucu("Ayşe", "Yıldız", "ayşeyldz", "yıldız123");
         Yonetici yonetici = new Yonetici("Abuzer", "Abuzeroğlu", "abuzettin", "123admin");
         Surucu surucu3 = new Surucu("Zeynep", "Kalafat", "zbkalafat", "123123zeynep");
+        Kullanici kullanici = new Kullanici("Ali","Veli","aliveli","ali123");
 
         istasyon1.aracEkle(arac1);
         istasyon1.aracEkle(arac2);
         istasyon2.aracEkle(arac3);
         istasyon1.aracEkle(arac4);
 
-        surucu1.bakiyeYukle(-10);
+        yonetici.kullaniciBilgileriniGetir(yonetici);
+
+        yonetici.bakiyeYukle(10);
+
+        yonetici.kullaniciBilgileriniGetir(yonetici);
+
+        surucu1.bakiyeYukle(30);
+        surucu2.bakiyeYukle(30);
 
         surucu1.araciTeslimAl(istasyon1);
 
-        //surucu1.araciTeslimAl(istasyon2);
 
-        surucu1.araciTeslimEt(istasyon3);
+        System.out.println("");
 
-        //surucu1.araciTeslimAl(istasyon3);
+        yonetici.aracBilgileriniGetir(arac1);
+
+        System.out.println("");
+
+        yonetici.kullaniciBilgileriniGetir(surucu1);
+
+        //surucu1.araciTeslimEt(istasyon3);
+
+        System.out.println(kullanici.toString());
+
+
+
+
 
 
 

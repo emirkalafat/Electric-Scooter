@@ -67,6 +67,18 @@ public class Surucu extends Kullanici {
 
     }
 
+    @Override
+    public String toString() {
+        return "Surucu{" +
+                "adi='" + this.getAdi()+ '\'' +
+                ", soyadi='" + this.getSoyadi() + '\'' +
+                ", kullaniciAdi='" + this.getKullaniciAdi() + '\'' +
+                ", kullaniciTuru='" + this.getKullaniciTuru() + '\'' +
+                ", bakiye=" + this.getBakiye() + '\'' +
+                ", sürdüğü araç=" + this.getSurulenArac().istasyondakiArac()+
+                '}';
+    }
+
     public Araclar getSurulenArac() {
         return surulenArac;
     }

@@ -57,6 +57,16 @@ public class Yonetici extends Kullanici {
         }
     }
 
+    @Override
+    public String toString() {
+        return "Admin{" +
+                "adi='" + getAdi() + '\'' +
+                ", soyadi='" + getSoyadi() + '\'' +
+                ", kullaniciAdi='" + getKullaniciAdi() + '\'' +
+                ", kullaniciTuru='" + getKullaniciTuru() + '\'' +
+                '}';
+    }
+
     public void kullaniciBilgileriniGetir(Kullanici kullanici) {
         System.out.println(kullanici.toString());
     }
