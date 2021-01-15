@@ -21,7 +21,7 @@ public class Test2 {
         Surucu surucu3 = new Surucu("Zeynep", "Kalafat", "zbkalafat", "123123zeynep");
         Kullanici kullanici = new Kullanici("Ali","Veli","aliveli","ali123");
 
-        /*istasyon1.aracEkle(arac1);
+        istasyon1.aracEkle(arac1);
         istasyon1.aracEkle(arac2);
         istasyon2.aracEkle(arac3);
         istasyon1.aracEkle(arac4);
@@ -40,9 +40,9 @@ public class Test2 {
 
 
         yonetici.aracBilgileriniGetir(arac1);
-        yonetici.kullaniciBilgileriniGetir(surucu1);*/
+        yonetici.kullaniciBilgileriniGetir(surucu1);
 
-       // surucu1.araciTeslimEt(istasyon3);
+        //surucu1.araciTeslimEt(istasyon3);
 
         System.out.println(kullanici.toString());
 

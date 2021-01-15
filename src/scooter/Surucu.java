@@ -70,7 +70,7 @@ public class Surucu extends Kullanici {
     @Override
     public String toString() {
         return "Surucu{" +
-                "adi='" + this.getKullaniciAdi()+ '\'' +
+                "adi='" + this.getAdi()+ '\'' +
                 ", soyadi='" + this.getSoyadi() + '\'' +
                 ", kullaniciAdi='" + this.getKullaniciAdi() + '\'' +
                 ", kullaniciTuru='" + this.getKullaniciTuru() + '\'' +
