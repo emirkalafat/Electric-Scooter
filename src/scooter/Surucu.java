@@ -24,7 +24,7 @@ public class Surucu extends Kullanici {
                        System.out.println("\n" + (i + 1) + ". " + bulunduguYer.getAracListesi().get(i).istasyondakiArac());
                        System.out.println("Bu aracı almak ister misiniz? [Evet/Hayır]");
                        Scanner scan = new Scanner(System.in);
-                       Character girdi = scan.next().charAt(0);
+                       char girdi = scan.next().charAt(0);
                        switch (girdi) {
                            case 'E' | 'e':
                                String mesaj = "******************************************************************************************" +

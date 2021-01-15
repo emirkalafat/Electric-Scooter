@@ -25,13 +25,13 @@ public class Test2 {
         istasyon2.aracEkle(arac3);
         istasyon1.aracEkle(arac4);
 
-        surucu1.bakiyeYukle(20);
+        surucu1.bakiyeYukle(-10);
 
         surucu1.araciTeslimAl(istasyon1);
 
-        surucu1.araciTeslimAl(istasyon2);
+        //surucu1.araciTeslimAl(istasyon2);
 
-        //surucu1.araciTeslimEt(istasyon3);
+        surucu1.araciTeslimEt(istasyon3);
 
         //surucu1.araciTeslimAl(istasyon3);
 
