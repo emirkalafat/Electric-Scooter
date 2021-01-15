@@ -38,8 +38,12 @@ public class Test2 {
         surucu1.araciTeslimAl(istasyon1);
 
 
+        System.out.println("");
 
         yonetici.aracBilgileriniGetir(arac1);
+
+        System.out.println("");
+
         yonetici.kullaniciBilgileriniGetir(surucu1);
 
         //surucu1.araciTeslimEt(istasyon3);
