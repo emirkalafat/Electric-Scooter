@@ -29,8 +29,8 @@ public class Araclar {
         return "Scooter{" +
                 "renk='" + renk + '\'' +
                 ", hız=" + hiz +
-                ", sofor=" + sofor +
                 ", istasyon=" + istasyon +
+                ", sofor=" + sofor +
                 '}';
     }
 

@@ -57,8 +57,6 @@ public class Istasyon {
     public String toString() {
         return " il='" + il + '\'' +
                 ", ilçe='" + ilce + '\'';
-
-
     }
 
     public ArrayList<Araclar> getAracListesi() {
