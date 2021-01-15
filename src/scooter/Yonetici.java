@@ -73,4 +73,7 @@ public class Yonetici extends Kullanici {
     public void aracBilgileriniGetir(Araclar araclar){
         System.out.println(araclar.toString());
     }
+    public void istasyonBilgileriniGetir(Istasyon istasyon){
+        System.out.println("istasyon bilgileri: " + istasyon.toString());
+    }
 }

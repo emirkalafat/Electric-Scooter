@@ -19,7 +19,7 @@ public class Test2 {
         Surucu surucu2 = new Surucu("Ayşe", "Yıldız", "ayşeyldz", "yıldız123");
         Yonetici yonetici = new Yonetici("Abuzer", "Abuzeroğlu", "abuzettin", "123admin");
         Surucu surucu3 = new Surucu("Zeynep", "Kalafat", "zbkalafat", "123123zeynep");
-        Kullanici kullanici = new Kullanici("Ali","Veli","aliveli","ali123");
+        Kullanici kullanici = new Kullanici("Ali", "Veli", "aliveli", "ali123");
 
         istasyon1.aracEkle(arac1);
         istasyon1.aracEkle(arac2);
@@ -40,6 +40,7 @@ public class Test2 {
 
         System.out.println("");
 
+
         yonetici.aracBilgileriniGetir(arac1);
 
         System.out.println("");
@@ -50,10 +51,7 @@ public class Test2 {
 
         System.out.println(kullanici.toString());
 
-
-
-
-
+        yonetici.istasyonBilgileriniGetir(istasyon1);
 
 
     }
